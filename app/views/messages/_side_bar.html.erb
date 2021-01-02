@@ -4,23 +4,17 @@
   </div>
 
   <div class="side-bar-header-create-room">
-    <a href="#">チャットを作成する</a>
+    <%= link_to "チャットを作成する", new_room_path %>
   </div>
 </div>
 
 
 <div class="side-bar-rooms">  <!--side-bar-roomの親要素-->
-
-  <div class="side-bar-room">   <!--side-bar-room-nameの親要素-->
-    <div class="side-bar-room-name">  <!--ルーム名表示部-->
-      <a href="#">techroom1</a>
+  <% current_user.rooms.each do |room| %>
+    <div class="side-bar-room">   <!--side-bar-room-nameの親要素-->
+     <div class="side-bar-room-name">  <!--ルーム名表示部-->
+       <a href="#"><%= room.name %></a>
+     </div>
     </div>
-  </div>
-
-  <div class="side-bar-room">
-    <div class="side-bar-room-name">
-      <a href="#">techroom2</a>
-    </div>
-  </div>
-
+  <%end%>
 </div>
