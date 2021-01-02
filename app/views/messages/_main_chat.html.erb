@@ -14,39 +14,7 @@
 
 
 <div class="chat-messages"> <!--チャット表示部の親要素-->
-
-  <div class="message-box"> <!--投稿されたひとつのチャットをまとめる親要素-->
-    <div class="up-message">  <!--投稿者、時刻表示部-->
-      <div class="message-user">
-        Tom
-      </div>
-      <div class="message-date">
-        2020/3/31(Wed) 12:43:30
-      </div>
-    </div>
-    <div class="post-message">  <!--投稿メッセージ表示部-->
-      <div class="message-content">
-        おはよう
-      </div>
-    </div>
-  </div>
-
-  <div class="message-box">
-    <div class="up-message">
-      <div class="message-user">
-        Tom
-      </div>
-      <div class="message-date">
-        2020/3/31(Wed) 12:47:30
-      </div>
-    </div>
-    <div class="post-message">
-      <div class="message-content">
-        こんばんは
-      </div>
-    </div>
-  </div>
-
+  <%= render partial: 'message', collection: @messages %>
 </div>
 
 
