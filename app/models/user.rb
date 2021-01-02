@@ -6,7 +6,4 @@ class User < ApplicationRecord
 
   validates :name, presence: true #ユーザ登録時、nameキーにデータ未入力だとエラーを返す
 
-  has_many :room_users
-  has_many :rooms, through: :room_users
-
 end
