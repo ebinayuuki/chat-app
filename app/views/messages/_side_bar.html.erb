@@ -13,7 +13,7 @@
   <% current_user.rooms.each do |room| %>
     <div class="side-bar-room">   <!--side-bar-room-nameの親要素-->
      <div class="side-bar-room-name">  <!--ルーム名表示部-->
-       <a href="#"><%= room.name %></a>
+       <%= link_to room.name, room_messages_path(room) %>
      </div>
     </div>
   <%end%>
