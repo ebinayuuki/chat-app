@@ -50,16 +50,13 @@
 </div>
 
 
-
-<div class="chat-form"> <!--投稿フォーム部の親要素-->
+<%= form_with model: [@room, @message], class: 'chat-form', local: true do |f| %>
   <div class="form-input">
-    <input class="form-message" placeholder= "type a message">  <!--投稿フォームに  type a message  を表示-->
-
+    <%= f.text_field :content, class: 'form-message', placeholder: 'type a message' %>
     <label class="form-image">
       <span class="image-file">画像</span>
-      <input type="file" class="hidden">
-    </label>    
-
+      <%= f.file_field :image, class: 'hidden' %>
+    </label>
   </div>
-  <input class="form-submit" type="submit" value="送信">
-</div>
+  <%= f.submit '送信', class: 'form-submit' %>
+<% end %>
