@@ -1,6 +1,6 @@
 <div class="side-bar-header"> <!--side-bar-header-name  side-bar-create-roomの親要素-->
   <div class="side-bar-header-name">
-    <a href="#">Tom</a>
+    <%= link_to current_user.name, edit_user_path(current_user) %>  <!--カレントユーザの名前表示、クリックでカレントユーザの編集ページへ-->
   </div>
 
   <div class="side-bar-header-create-room">
