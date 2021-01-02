@@ -3,4 +3,6 @@ Rails.application.routes.draw do
   get 'messages/index'
   root to: "messages#index"
   resources :users, only: [:edit, :update]  #ユーザ情報編集に必要なルーティングのみ記述
+  resources :rooms, only: [:new, :create]
+  
 end
