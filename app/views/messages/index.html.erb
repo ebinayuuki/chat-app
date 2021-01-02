@@ -1,4 +1,11 @@
-<div class="wrapper">
-  <%= render "side_bar" %>
-  <%= render "main_chat" %>
+<div class="wrapper"><!--親要素-->
+
+  <div class="side-bar"><!--子要素 サイドバー呼び出し-->
+    <%= render "side_bar" %>
+  </div>
+
+  <div class="chat"><!--子要素 チャット部呼び出し-->
+    <%= render "main_chat" %>
+  </div>
+
 </div>
